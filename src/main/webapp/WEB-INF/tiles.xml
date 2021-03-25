@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <!-- CMS -->
+    <!-- Base Define CMS Login-->
+<!--    <definition name="CMS/login"-->
+<!--                template="/WEB-INF/jsp/CMS/login.jsp">-->
+<!--    </definition>-->
+
+
+<!--    &lt;!&ndash; CMS Navbar layout Base Define &ndash;&gt;-->
+    <definition name="admin.definition"
+                template="/WEB-INF/jsp/layout/adminMainLayout.jsp">
+        <put-attribute name="navbar" value="/WEB-INF/jsp/CMS/navbar.jsp" />
+        <put-attribute name="body" value="" />
+    </definition>
+    <definition name="admin/index" extends="admin.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/index.jsp" />
+    </definition>
+
+<!--    <definition name="CMS/productList" extends="CMS.definition">-->
+<!--        <put-attribute name="body" value="/WEB-INF/jsp/CMS/productList.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="CMS/addProduct" extends="CMS.definition">-->
+<!--        <put-attribute name="body" value="/WEB-INF/jsp/CMS/addProduct.jsp" />-->
+<!--    </definition>-->
+    <!-- Base Define -->
+    <definition name="client.definition"
+                template="/WEB-INF/jsp/layout/clientMainLayout.jsp">
+
+        <put-attribute name="header" value="/WEB-INF/jsp/client/header.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/client/footer.jsp" />
+    </definition>
+    <!-- Home Page  -->
+    <definition name="homepage" extends="client.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/client/homepage.jsp" />
+    </definition>
+
+    <!-- Product Page -->
+    <definition name="listProduct" extends="client.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/client/listProduct.jsp" />
+    </definition>
+<!--    <definition name="404Page" extends="client.definition">-->
+<!--        <put-attribute name="body" value="/WEB-INF/jsp/client/404Page.jsp" />-->
+<!--    </definition>-->
+
+    <definition name="productDetail" extends="client.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/client/productDetail.jsp" />
+    </definition>
+
+<!--    <definition name="cartItem" extends="client.definition">-->
+<!--        <put-attribute name="body" value="/WEB-INF/jsp/client/cartItem.jsp" />-->
+<!--    </definition>-->
+<!--    <definition name="ajaxTest1" extends="client.definition">-->
+<!--        <put-attribute name="body" value="/WEB-INF/jsp/ajaxTest1.jsp" />-->
+<!--    </definition>-->
+
+
+</tiles-definitions>
